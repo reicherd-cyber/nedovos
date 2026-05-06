@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nedovos | טופס תרומה</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&family=Secular+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body data-page="donate">
+  <div class="page-shell donate-flow-shell">
+    <main class="donate-flow-page">
+      <section class="donate-flow-card">
+        <div id="donate-mosad-logo" class="donate-mosad-logo home-app-logo"></div>
+        <h1 id="donate-mosad-name" class="donate-mosad-name">טוען מוסד...</h1>
+        <p id="donate-mosad-subtitle" class="donate-mosad-subtitle">למה מיועדת תרומתך</p>
+
+        <form id="donation-form" class="donate-entry-form">
+          <input type="hidden" name="campaign">
+          <input type="hidden" name="amount" value="180">
+
+          <div class="donate-purpose-block">
+            <label class="donate-purpose-label" for="purpose-select">למה מיועדת תרומתך</label>
+            <div class="donate-purpose-select-wrap">
+              <select id="purpose-select" class="donate-purpose-select"></select>
+            </div>
+          </div>
+
+          <div class="donate-grid">
+            <label>
+              שם משפחה ושם פרטי:
+              <input type="text" name="name" required>
+              <small class="field-note field-note-accent">הקבלה תופק על שם זה</small>
+            </label>
+            <label>
+              תעודת זהות / ח.פ:
+              <input type="text" name="identity">
+              <small class="field-note">משתמש רשום? לחץ כאן</small>
+            </label>
+
+            <label>
+              כתובת:
+              <input type="text" name="address">
+            </label>
+            <label>
+              עיר:
+              <input type="text" name="city">
+            </label>
+
+            <label>
+              טלפון:
+              <input type="tel" name="phone" required>
+            </label>
+            <label>
+              מייל:
+              <input type="email" name="email">
+              <small class="field-note field-note-accent">הקבלה תשלח למייל זה</small>
+            </label>
+          </div>
+
+          <label class="full-width-field">
+            הערות:
+            <textarea name="notes" rows="3"></textarea>
+          </label>
+
+          <div class="payment-methods-block">
+            <div class="payment-methods-grid" role="tablist" aria-label="אמצעי תשלום">
+              <button class="payment-card" data-method="bank" type="button">
+                <span class="payment-checkmark" aria-hidden="true"></span>
+                <span class="payment-icon payment-icon-bank"></span>
+                <strong>העברה בנקאית</strong>
+                <small>בקליק</small>
+              </button>
+              <button class="payment-card" data-method="recurring-card" type="button">
+                <span class="payment-checkmark" aria-hidden="true"></span>
+                <span class="payment-icon payment-icon-bankdoc"></span>
+                <strong>הו"ק בנקאי</strong>
+                <small>אישור בנקאי</small>
+              </button>
+              <button class="payment-card" data-method="bit" type="button">
+                <span class="payment-checkmark" aria-hidden="true"></span>
+                <span class="payment-icon payment-icon-bit"></span>
+                <strong>הו"ק אשראי</strong>
+                <small>ללא תפיסת מסגרת</small>
+              </button>
+              <button class="payment-card is-active" data-method="single" type="button">
+                <span class="payment-checkmark" aria-hidden="true"></span>
+                <span class="payment-icon payment-icon-card"></span>
+                <strong>חיוב בודד / תשלומים</strong>
+                <small>באמצעות אשראי</small>
+              </button>
+            </div>
+
+            <div class="payment-detail-panels">
+              <section class="payment-detail-panel is-active" data-panel="single">
+                <div class="payment-form-grid">
+                  <label>
+                    <span class="required-mark">*</span>סכום לחיוב:
+                    <input type="number" min="18" step="1" class="js-amount-input" value="180" required>
+                  </label>
+                  <div class="currency-field-wrap">
+                    <label>
+                      <span class="required-mark">*</span>לכמה תשלומים לחלק?
+                      <select name="installments">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>6</option>
+                        <option>12</option>
+                      </select>
+                    </label>
+                    <div class="currency-toggle">
+                      <span>מטבע:</span>
+                      <button type="button" class="currency-chip is-active">שקל</button>
+                      <button type="button" class="currency-chip">דולר</button>
+                    </div>
+                  </div>
+
+                  <label>
+                    <span class="required-mark">*</span>מספר כרטיס אשראי:
+                    <div class="input-with-icon">
+                      <span class="card-inline-icon" aria-hidden="true"></span>
+                      <input type="text" name="cardNumber" placeholder="">
+                    </div>
+                  </label>
+                  <label>
+                    <span class="required-mark">*</span>תוקף:
+                    <input type="text" name="cardExpiry" placeholder="לדוגמא 0426">
+                  </label>
+
+                  <label class="payment-form-span-2">
+                    3 ספרות בגב הכרטיס:
+                    <input type="text" name="cardCvv">
+                  </label>
+                </div>
+              </section>
+
+              <section class="payment-detail-panel" data-panel="bit">
+                <div class="payment-form-grid">
+                  <label>
+                    <span class="required-mark">*</span>סכום לחיוב:
+                    <input type="number" min="18" step="1" class="js-amount-input" value="180">
+                  </label>
+                  <label>
+                    <span class="required-mark">*</span>יום חיוב חודשי:
+                    <select name="billingDay">
+                      <option>1</option>
+                      <option>5</option>
+                      <option>10</option>
+                      <option>15</option>
+                      <option>20</option>
+                      <option>25</option>
+                      <option>28</option>
+                    </select>
+                  </label>
+
+                  <label>
+                    שם בעל הכרטיס:
+                    <input type="text" name="cardHolderName" placeholder="">
+                  </label>
+                  <label>
+                    <span class="required-mark">*</span>מספר כרטיס אשראי:
+                    <div class="input-with-icon">
+                      <span class="card-inline-icon" aria-hidden="true"></span>
+                      <input type="text" name="recurringCardNumber" placeholder="">
+                    </div>
+                  </label>
+
+                  <label>
+                    <span class="required-mark">*</span>תוקף:
+                    <input type="text" name="recurringCardExpiry" placeholder="0426">
+                  </label>
+
+                  <label>
+                    3 ספרות בגב הכרטיס:
+                    <input type="text" name="recurringCardCvv">
+                  </label>
+                  <label>
+                    הערת מסלול:
+                    <input type="text" name="bitRef" placeholder="ללא תפיסת מסגרת">
+                  </label>
+                </div>
+              </section>
+
+              <section class="payment-detail-panel" data-panel="recurring-card">
+                <div class="payment-form-grid">
+                  <label>
+                    <span class="required-mark">*</span>סכום לחיוב חודשי:
+                    <input type="number" min="18" step="1" class="js-amount-input" value="180">
+                  </label>
+                  <label>
+                    <span class="required-mark">*</span>יום חיוב חודשי:
+                    <select name="billingDayRecurring">
+                      <option>1</option>
+                      <option>5</option>
+                      <option>10</option>
+                      <option>15</option>
+                      <option>20</option>
+                      <option>25</option>
+                      <option>28</option>
+                    </select>
+                  </label>
+
+                  <label>
+                    שם בעל החשבון:
+                    <input type="text" name="bankOwnerName" placeholder="">
+                  </label>
+                  <label>
+                    תעודת זהות בעל החשבון:
+                    <input type="text" name="bankOwnerIdentity" placeholder="">
+                  </label>
+
+                  <label>
+                    בנק / סניף:
+                    <input type="text" name="bankBranch" placeholder="בנק / סניף">
+                  </label>
+                  <label>
+                    מספר חשבון:
+                    <input type="text" name="bankAccountRecurring" placeholder="">
+                  </label>
+
+                  <label class="payment-form-span-2">
+                    הערת מסלול:
+                    <input type="text" name="recurringNote" placeholder="פרטי הרשאה בנקאית">
+                  </label>
+                </div>
+              </section>
+
+              <section class="payment-detail-panel" data-panel="bank">
+                <div class="payment-form-grid">
+                  <label>
+                    <span class="required-mark">*</span>סכום להעברה:
+                    <input type="number" min="18" step="1" class="js-amount-input" value="180">
+                  </label>
+                  <label>
+                    שם החשבון:
+                    <input type="text" name="bankTransferOwner" placeholder="">
+                  </label>
+
+                  <label>
+                    בנק:
+                    <input type="text" name="bankName" placeholder="">
+                  </label>
+                  <label>
+                    סניף:
+                    <input type="text" name="bankBranchTransfer" placeholder="">
+                  </label>
+
+                  <label>
+                    מספר חשבון:
+                    <input type="text" name="bankAccount" placeholder="">
+                  </label>
+                  <label>
+                    אסמכתא / איש קשר:
+                    <input type="text" name="bankContact" placeholder="שם איש קשר לביצוע ההעברה">
+                  </label>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <label class="checkbox-row donate-check-row">
+            <input type="checkbox" name="terms" required>
+            <span>אני מאשר/ת את ביצוע התרומה ואת שליחת הקבלה בהתאם לפרטים שמולאו.</span>
+          </label>
+
+          <button class="button donate-submit-button" type="submit">המשך לתשלום</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/dev-reload.js"></script>
+</body>
+</html>

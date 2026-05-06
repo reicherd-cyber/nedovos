@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nedovos | אזור תורם</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&family=Secular+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body data-page="portal">
+  <div class="page-shell">
+    <header class="site-header compact">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">נ</span>
+        <span>
+          <strong>Nedovos</strong>
+          <small>אזור תורם</small>
+        </span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">ראשי</a>
+        <a href="donate.html">תרומה</a>
+        <a href="admin.html">ניהול</a>
+      </nav>
+    </header>
+
+    <main class="dashboard-layout">
+      <section class="dashboard-main">
+        <div class="section-heading tight">
+          <p class="eyebrow">פרופיל אישי</p>
+          <h1>כל היסטוריית התרומות וההתחייבויות במקום אחד.</h1>
+          <p>אזור התורם בדמו מתעדכן מתוך טופס התרומה ושומר את הנתונים בדפדפן.</p>
+        </div>
+
+        <div class="kpi-row">
+          <article class="kpi-card glass">
+            <span>סה"כ תרומות</span>
+            <strong id="portal-total">&#8362;0</strong>
+          </article>
+          <article class="kpi-card glass">
+            <span>הוראות קבע</span>
+            <strong id="portal-recurring">0</strong>
+          </article>
+          <article class="kpi-card glass">
+            <span>קבלות שהופקו</span>
+            <strong id="portal-receipts">0</strong>
+          </article>
+        </div>
+
+        <section class="glass data-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">היסטוריית עסקאות</p>
+              <h2>תרומות אחרונות</h2>
+            </div>
+            <a class="button button-ghost" href="donate.html">לתרומה חדשה</a>
+          </div>
+          <div id="portal-history" class="table-list"></div>
+        </section>
+
+        <section class="glass data-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">חיובים חודשיים</p>
+              <h2>התחייבויות פעילות</h2>
+            </div>
+          </div>
+          <div id="portal-recurring-list" class="table-list"></div>
+        </section>
+      </section>
+
+      <aside class="dashboard-side">
+        <section class="glass data-panel">
+          <p class="eyebrow">פרטי תורם</p>
+          <h2>מידע שמור</h2>
+          <div id="portal-profile" class="profile-block"></div>
+        </section>
+
+        <section class="glass data-panel">
+          <p class="eyebrow">אמצעי תשלום שמורים</p>
+          <h2>כרטיסים בדמו</h2>
+          <div class="saved-cards">
+            <article class="saved-card">
+              <strong>Visa המסתיים ב-4242</strong>
+              <span>כרטיס ראשי</span>
+            </article>
+            <article class="saved-card">
+              <strong>Mastercard המסתיים ב-1178</strong>
+              <span>כרטיס גיבוי</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="glass data-panel">
+          <p class="eyebrow">קבלות</p>
+          <h2>סטטוס שליחה</h2>
+          <p class="muted">בדמו הזה קבלה נוצרת אוטומטית לאחר שמירת תרומה.</p>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/dev-reload.js"></script>
+</body>
+</html>

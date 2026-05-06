@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nedovos | ממשק ניהול</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&family=Secular+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body data-page="admin">
+  <div class="page-shell">
+    <header class="site-header compact">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">נ</span>
+        <span>
+          <strong>Nedovos</strong>
+          <small>ממשק ניהול</small>
+        </span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">ראשי</a>
+        <a href="donate.html">תרומה</a>
+        <a href="donor-portal.html">אזור תורם</a>
+      </nav>
+    </header>
+
+    <main class="admin-layout">
+      <aside class="admin-sidebar glass">
+        <p class="eyebrow">מודולים</p>
+        <a class="sidebar-link active" href="#overview">סקירה</a>
+        <a class="sidebar-link" href="#revenue">הכנסות</a>
+        <a class="sidebar-link" href="#donors">תורמים</a>
+        <a class="sidebar-link" href="#receipts">קבלות</a>
+        <a class="sidebar-link" href="#messages">הודעות</a>
+        <a class="sidebar-link" href="#services">שירותים</a>
+      </aside>
+
+      <section class="admin-main">
+        <div class="section-heading tight" id="overview">
+          <p class="eyebrow">מרכז שליטה למוסד</p>
+          <h1>כספים, תקשורת ותפעול קהילה במסך אחד.</h1>
+          <p>המסך הזה מכסה את פונקציות הליבה של מערכת ניהול לעמותה או בית כנסת, במיתוג חדש ובממשק מקורי.</p>
+        </div>
+
+        <div class="kpi-row">
+          <article class="kpi-card glass">
+            <span>זמין למשיכה</span>
+            <strong>&#8362;61,900</strong>
+          </article>
+          <article class="kpi-card glass">
+            <span>ממתין לסליקה</span>
+            <strong>&#8362;9,480</strong>
+          </article>
+          <article class="kpi-card glass">
+            <span>הוראות קבע חודשיות</span>
+            <strong id="admin-recurring-count">0</strong>
+          </article>
+          <article class="kpi-card glass">
+            <span>הודעות צוות שלא נקראו</span>
+            <strong>4</strong>
+          </article>
+        </div>
+
+        <section class="admin-grid">
+          <article class="glass data-panel" id="revenue">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">ערוצי גבייה</p>
+                <h2>תמהיל הכנסות</h2>
+              </div>
+            </div>
+            <div class="bar-stack">
+              <div class="bar-row"><span>אשראי חד פעמי</span><div><i style="width:72%"></i></div><strong>&#8362;48k</strong></div>
+              <div class="bar-row"><span>הוראת קבע אשראי</span><div><i style="width:55%"></i></div><strong>&#8362;31k</strong></div>
+              <div class="bar-row"><span>הוראת קבע בנקאית</span><div><i style="width:40%"></i></div><strong>&#8362;19k</strong></div>
+              <div class="bar-row"><span>ביט</span><div><i style="width:24%"></i></div><strong>&#8362;8k</strong></div>
+            </div>
+          </article>
+
+          <article class="glass data-panel" id="receipts">
+            <p class="eyebrow">מרכז קבלות</p>
+            <h2>מצב אוטומציה</h2>
+            <ul class="check-list compact-list">
+              <li>קבלות מופקות אוטומטית לעסקאות אשראי</li>
+              <li>שליחה במייל פעילה</li>
+              <li>עותק נשלח למשרד</li>
+              <li>תור נפרד לבדיקת תרומות אופליין</li>
+            </ul>
+          </article>
+
+          <article class="glass data-panel" id="donors">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">CRM תורמים</p>
+                <h2>פעילות אחרונה</h2>
+              </div>
+            </div>
+            <div id="admin-donors" class="table-list"></div>
+          </article>
+
+          <article class="glass data-panel" id="messages">
+            <p class="eyebrow">הפצה ותקשורת</p>
+            <h2>מסרים מתוזמנים</h2>
+            <div class="feed-list">
+              <article class="feed-item">
+                <strong>שיחה קולית</strong>
+                <span>תזכורת לאירוע ערב ל-420 נמענים</span>
+              </article>
+              <article class="feed-item">
+                <strong>SMS</strong>
+                <span>הודעת תודה נשלחת לאחר הפקת קבלה</span>
+              </article>
+              <article class="feed-item">
+                <strong>הודעה פנימית</strong>
+                <span>הגזבר ביקש יצוא קבלות לסוף חודש</span>
+              </article>
+            </div>
+          </article>
+
+          <article class="glass data-panel" id="services">
+            <p class="eyebrow">שירותים משלימים</p>
+            <h2>מודולים פעילים</h2>
+            <div class="service-pills">
+              <span>זמני תפילות</span>
+              <span>ניהול עמדות</span>
+              <span>טפסים</span>
+              <span>מיזוג חכם</span>
+              <span>לוח מודעות</span>
+              <span>קמפיין מאצ'ינג</span>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/dev-reload.js"></script>
+</body>
+</html>

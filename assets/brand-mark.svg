@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Nedovos brand mark">
+  <defs>
+    <linearGradient id="badge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f7575"/>
+      <stop offset="100%" stop-color="#123f48"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f4ca94"/>
+      <stop offset="100%" stop-color="#d88a33"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="22.5" fill="url(#badge)"/>
+  <circle cx="32" cy="32" r="22.5" fill="none" stroke="url(#rim)" stroke-width="4"/>
+  <text
+    x="32"
+    y="34.5"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-size="27"
+    font-weight="800"
+    fill="#fff8ed">N</text>
+</svg>
